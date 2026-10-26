@@ -614,3 +614,4 @@ ol.timeline { list-style: none; margin: 0; padding: 0; }
 .icon--flip { transform: scaleX(-1); }
 .news-card h3 a:hover { color: var(--red); }
 .site-footer .logo__sub { color: #f0b3b6; }
+.hero__bg img[src*="careers-barista"] { object-position: center 15%; }
