@@ -1,0 +1,11 @@
+{
+  "name": "vista-coffee-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vista Coffee corporate website (static HTML/CSS/JS)",
+  "scripts": {
+    "build": "python3 build.py",
+    "dev": "python3 dev.py",
+    "start": "python3 -m http.server 8000"
+  }
+}

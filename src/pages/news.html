@@ -1,0 +1,49 @@
+<!--meta
+title: Vista Coffee News & Industry Updates
+description: The latest company news, industry insights, farmer and community stories, product development, events, sustainability and market insights from Vista Coffee.
+nav: news
+head_extra: <script src="js/news-data.js" defer></script>
+-->
+    <section class="hero">
+      <div class="hero__bg">{{img:steaming-cup|Steaming cup of coffee on a bed of roasted beans|100vw|eager}}</div>
+      <div class="container">
+        <div class="hero__content">
+          <p class="breadcrumb"><a href="index.html">Home</a> / News</p>
+          <span class="eyebrow eyebrow--light">News &amp; Events</span>
+          <h1>Latest Updates from Vista Coffee</h1>
+          <p>Company news, industry insights and stories from Rwanda's coffee community.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#latest" data-latest-news>Read Our Latest News</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="latest">
+      <div class="container">
+        <div class="tabs__list" role="toolbar" aria-label="Filter news by category" data-news-filter>
+          <button class="tab is-active" type="button" data-cat="all" aria-pressed="true">All</button>
+          <button class="tab" type="button" data-cat="Company News" aria-pressed="false">Company News</button>
+          <button class="tab" type="button" data-cat="Industry Insights" aria-pressed="false">Industry Insights</button>
+          <button class="tab" type="button" data-cat="Farmer &amp; Community" aria-pressed="false">Farmer &amp; Community</button>
+          <button class="tab" type="button" data-cat="Product Development" aria-pressed="false">Product Development</button>
+          <button class="tab" type="button" data-cat="Exhibitions &amp; Events" aria-pressed="false">Exhibitions &amp; Events</button>
+          <button class="tab" type="button" data-cat="Sustainability" aria-pressed="false">Sustainability</button>
+          <button class="tab" type="button" data-cat="Market Insights" aria-pressed="false">Market Insights</button>
+        </div>
+        <div class="grid grid--3" data-news-grid aria-live="polite">
+          <noscript><p class="news-empty">Please enable JavaScript to view our latest news.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cream">
+      <div class="container">
+        <div class="cta-banner center" data-reveal>
+          {{img:beans-texture|Close-up of roasted coffee beans|100vw}}
+          <h2>Stay Informed</h2>
+          <p>Subscribe to our newsletter in the footer below, or contact us for media and partnership inquiries.</p>
+          <div class="btn-row center"><a class="btn btn--primary" href="contact.html#inquiry">Contact Us</a></div>
+        </div>
+      </div>
+    </section>

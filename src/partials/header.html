@@ -1,0 +1,53 @@
+<header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Vista Coffee — home">
+        <svg class="logo__mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="logo__text"><span class="logo__name">VISTA</span><span class="logo__sub">COFFEE</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" data-nav="home">Home</a></li>
+          <li><a href="about.html" data-nav="about">About Us</a></li>
+          <li><a href="our-coffee.html" data-nav="coffee">Our Coffee</a></li>
+          <li><a href="products.html" data-nav="products">Products</a></li>
+          <li><a href="export.html" data-nav="export">Export</a></li>
+          <li><a href="sustainability.html" data-nav="sustainability">Sustainability</a></li>
+          <li><a href="facilities.html" data-nav="facilities">Our Facilities</a></li>
+          <li><a href="news.html" data-nav="news">News</a></li>
+          <li><a href="careers.html" data-nav="careers">Careers</a></li>
+          <li><a href="contact.html" data-nav="contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-search-open aria-label="Search the site">{{icon:search}}</button>
+        <a class="btn btn--primary btn--sm header-cta" href="contact.html?type=quote#inquiry">Request a Quote</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">{{icon:menu}}</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a class="mobile-link" href="index.html" data-nav="home">Home</a>
+    <a class="mobile-link" href="about.html" data-nav="about">About Us</a>
+    <a class="mobile-link" href="our-coffee.html" data-nav="coffee">Our Coffee</a>
+    <a class="mobile-link" href="products.html" data-nav="products">Products</a>
+    <a class="mobile-link" href="export.html" data-nav="export">Export</a>
+    <a class="mobile-link" href="sustainability.html" data-nav="sustainability">Sustainability</a>
+    <a class="mobile-link" href="facilities.html" data-nav="facilities">Our Facilities</a>
+    <a class="mobile-link" href="news.html" data-nav="news">News</a>
+    <a class="mobile-link" href="careers.html" data-nav="careers">Careers</a>
+    <a class="mobile-link" href="contact.html" data-nav="contact">Contact Us</a>
+    <a class="btn btn--primary" href="contact.html?type=quote#inquiry">Request a Quote</a>
+  </nav>
+
+  <div class="search-overlay" id="search" role="dialog" aria-modal="true" aria-label="Search Vista Coffee">
+    <div class="search-box">
+      <div class="search-box__field">
+        {{icon:search}}
+        <label class="visually-hidden" for="search-input">Search</label>
+        <input id="search-input" type="search" placeholder="Search coffee, products, export…" autocomplete="off">
+        <button class="icon-btn" type="button" data-search-close aria-label="Close search">{{icon:close}}</button>
+      </div>
+      <div class="search-results" id="search-results" aria-live="polite"></div>
+    </div>
+  </div>

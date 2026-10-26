@@ -1,0 +1,118 @@
+<!--meta
+title: Contact Vista Coffee | Coffee Inquiries
+description: Contact Vista Coffee in Kigali, Rwanda for coffee inquiries, quotations and samples. Email sales@vistagroup.com or send an inquiry online.
+nav: contact
+-->
+    <section class="hero" style="min-height:380px">
+      <div class="hero__bg">{{img:cheers|Two people raising cups of latte together|100vw|eager}}</div>
+      <div class="container">
+        <div class="hero__content">
+          <p class="breadcrumb"><a href="index.html">Home</a> / Contact Us</p>
+          <span class="eyebrow eyebrow--light">Contact Us</span>
+          <h1>Let's Build a Strong Coffee Partnership</h1>
+          <p>Tell us what you need and our sales team will get back to you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div data-reveal>
+          <div class="contact-card">
+            <h2>Get in Touch</h2>
+            <ul class="contact-list">
+              <li><span class="icon-wrap">{{icon:pin}}</span><div><small>Location</small>Kigali, Rwanda</div></li>
+              <li><span class="icon-wrap">{{icon:mail}}</span><div><small>Email</small><a href="mailto:sales@vistagroup.com">sales@vistagroup.com</a></div></li>
+              <li><span class="icon-wrap">{{icon:globe}}</span><div><small>Website</small><a href="https://www.vistagroup.com" rel="noopener">www.vistagroup.com</a></div></li>
+              <!-- TODO: replace [ADD NUMBER] and [ADD HOURS] with real details. -->
+              <li><span class="icon-wrap">{{icon:phone}}</span><div><small>Phone / WhatsApp</small>[ADD NUMBER]</div></li>
+              <li><span class="icon-wrap">{{icon:clock}}</span><div><small>Business Hours</small>[ADD HOURS]</div></li>
+            </ul>
+          </div>
+          <div class="map-embed">
+            <iframe title="Map of Kigali, Rwanda" src="https://www.google.com/maps?q=Kigali,+Rwanda&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="form-card" id="inquiry" data-reveal style="--d:.1s">
+          <span class="eyebrow">Send an Inquiry</span>
+          <h2 style="font-size:1.6rem">How Can We Help?</h2>
+          <p class="form-note" style="margin-bottom:22px">Fields marked <span style="color:var(--red)">*</span> are required. Your inquiry goes directly to <a href="mailto:sales@vistagroup.com" style="text-decoration:underline">sales@vistagroup.com</a>.</p>
+          <form class="form-grid" data-inquiry-form action="https://formsubmit.co/sales@vistagroup.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New inquiry — Vista Coffee website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="">
+            <input class="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="field field--full">
+              <label for="f-type">Inquiry Type</label>
+              <select id="f-type" name="Inquiry Type">
+                <option>General Inquiry</option>
+                <option value="Quote Request">Request a Quote</option>
+                <option value="Sample Request">Request Coffee Samples</option>
+                <option value="Product Specifications">Request Product Specifications</option>
+                <option value="Export Quotation">Request an Export Quotation</option>
+                <option value="Partnership">Discuss a Partnership</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-name">Full Name <span class="req">*</span></label>
+              <input id="f-name" name="Full Name" type="text" autocomplete="name" required>
+              <span class="field__error">Please enter your full name.</span>
+            </div>
+            <div class="field">
+              <label for="f-company">Company Name</label>
+              <input id="f-company" name="Company Name" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="f-country">Country <span class="req">*</span></label>
+              <input id="f-country" name="Country" type="text" autocomplete="country-name" required>
+              <span class="field__error">Please enter your country.</span>
+            </div>
+            <div class="field">
+              <label for="f-email">Email <span class="req">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+              <span class="field__error">Please enter a valid email address.</span>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone / WhatsApp</label>
+              <input id="f-phone" name="Phone / WhatsApp" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-product">Product of Interest <span class="req">*</span></label>
+              <select id="f-product" name="Product of Interest" required>
+                <option value="">Select a product</option>
+                <option>Green Coffee Beans</option>
+                <option>Roasted Coffee Beans</option>
+                <option>Ground Coffee</option>
+                <option>Private Label &amp; OEM</option>
+                <option>Bulk &amp; Wholesale Supply</option>
+                <option>Other / Not sure yet</option>
+              </select>
+              <span class="field__error">Please choose a product.</span>
+            </div>
+            <div class="field">
+              <label for="f-qty">Required Quantity</label>
+              <input id="f-qty" name="Required Quantity" type="text" placeholder="e.g. kg, bags or containers">
+            </div>
+            <div class="field">
+              <label for="f-dest">Destination Country or Port</label>
+              <input id="f-dest" name="Destination Country or Port" type="text">
+            </div>
+            <div class="field field--full">
+              <label for="f-message">Message <span class="req">*</span></label>
+              <textarea id="f-message" name="Message" required placeholder="Tell us about your requirements: grade, process, roast, grind, packaging, timing…"></textarea>
+              <span class="field__error">Please add a short message.</span>
+            </div>
+            <div class="field--full">
+              <div class="btn-row" style="margin-top:4px">
+                <button class="btn btn--primary" type="submit">{{icon:send|icon--sm}} Send Inquiry</button>
+                <button class="btn btn--outline" type="button" data-set-type="Sample Request">Request Coffee Samples</button>
+                <button class="btn btn--outline" type="button" data-set-type="Quote Request">Request a Quote</button>
+              </div>
+              <div class="form-status" role="status" data-form-status></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
