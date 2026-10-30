@@ -289,6 +289,12 @@ body.menu-open { overflow: hidden; }
 .card__body { padding: 22px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .card__body p { color: var(--muted); font-size: .95rem; margin: 0 0 8px; }
 .card__body .link-more { margin-top: auto; }
+.card__media--contain { display: block; background: var(--brown); cursor: zoom-in; }
+.card__media--contain img { object-fit: contain; }
+.card:hover .card__media--contain img { transform: none; }
+.card__media img[src*="machine-espresso"] { object-position: center 58%; }
+.card__media img[src*="machine-grinders"] { object-position: center 40%; }
+.check-list.check-list--light li { color: rgba(255,255,255,.85); }
 .card__tag {
   align-self: flex-start; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   color: var(--green); background: var(--green-soft); padding: 4px 10px; border-radius: 999px; margin-bottom: 6px;
@@ -615,3 +621,5 @@ ol.timeline { list-style: none; margin: 0; padding: 0; }
 .news-card h3 a:hover { color: var(--red); }
 .site-footer .logo__sub { color: #f0b3b6; }
 .hero__bg img[src*="careers-barista"] { object-position: center 15%; }
+.hero__bg img[src*="hero-hills"] { object-position: center 60%; }
+

@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/sales@vistagroup.com';
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/info@vistacoffeerw.com';
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
@@ -156,14 +156,19 @@
     var setProduct = filterGroup(productBar, 'data-filter-value', function (value) {
       cards.forEach(function (c) {
         var cat = c.getAttribute('data-category');
-        c.hidden = value === 'all' ? false : cat !== value;
+        // data-filter-only cards (machine types) appear only under their own filter
+        c.hidden = value === 'all' ? c.hasAttribute('data-filter-only') : cat !== value;
       });
     });
-    var hash = window.location.hash.replace('#', '');
-    if (hash && $('[data-filter-value="' + hash + '"]', productBar)) {
-      setProduct(hash);
-      setTimeout(function () { productBar.scrollIntoView({ block: 'start' }); window.scrollBy(0, -90); }, 50);
+    function filterFromHash() {
+      var hash = window.location.hash.replace('#', '');
+      if (hash && $('[data-filter-value="' + hash + '"]', productBar)) {
+        setProduct(hash);
+        setTimeout(function () { productBar.scrollIntoView({ block: 'start' }); window.scrollBy(0, -90); }, 50);
+      }
     }
+    filterFromHash();
+    window.addEventListener('hashchange', filterFromHash);
   }
 
   /* ---------- News list ---------- */
@@ -263,7 +268,7 @@
     function mailtoFallback(data) {
       var body = Object.keys(data).filter(function (k) { return k.charAt(0) !== '_'; })
         .map(function (k) { return k + ': ' + data[k]; }).join('\n');
-      return 'mailto:sales@vistagroup.com?subject=' + encodeURIComponent('Inquiry — ' + data['Inquiry Type']) + '&body=' + encodeURIComponent(body);
+      return 'mailto:info@vistacoffeerw.com?subject=' + encodeURIComponent('Inquiry — ' + data['Inquiry Type']) + '&body=' + encodeURIComponent(body);
     }
 
     form.addEventListener('submit', function (e) {
@@ -299,7 +304,7 @@
         })
         .catch(function () {
           showStatus('error', 'Sorry, your inquiry could not be sent right now. Please <a href="' + mailtoFallback(data) +
-            '" style="text-decoration:underline;font-weight:600">email it to sales@vistagroup.com</a> instead.');
+            '" style="text-decoration:underline;font-weight:600">email it to info@vistacoffeerw.com</a> instead.');
         })
         .then(function () { btn.disabled = false; btn.innerHTML = label; });
     });
@@ -318,7 +323,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({ email: email, _subject: 'Newsletter sign-up — Vista Coffee website', Request: 'Please add me to the Vista Coffee newsletter.' })
       }).then(function (r) { if (!r.ok) throw new Error(); nf.reset(); msg.textContent = 'Thank you for subscribing.'; })
-        .catch(function () { msg.textContent = 'Sign-up failed. Please email sales@vistagroup.com.'; });
+        .catch(function () { msg.textContent = 'Sign-up failed. Please email info@vistacoffeerw.com.'; });
     });
   });
 })();
