@@ -623,3 +623,6 @@ ol.timeline { list-style: none; margin: 0; padding: 0; }
 .hero__bg img[src*="careers-barista"] { object-position: center 15%; }
 .hero__bg img[src*="hero-hills"] { object-position: center 60%; }
 
+.logo__img { height: 46px; width: auto; }
+.site-footer .logo__img { height: 56px; }
+@media (min-width: 1240px) { .logo__img { height: 50px; } }
